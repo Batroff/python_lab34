@@ -1,6 +1,4 @@
 # БСБО-05-19 Савранский С.
-from math import sqrt
-
 
 def roots_of_quadratic_equation(a, b, c):
     if a == 0 and b == 0:
@@ -19,4 +17,16 @@ def roots_of_quadratic_equation(a, b, c):
     return [x1, x2]
 
 
-print(*sorted(roots_of_quadratic_equation(1, -3, 2)))
+def solve(*coefficients):
+    if len(coefficients) == 3:
+        a, b, c = coefficients
+        return roots_of_quadratic_equation(a, b, c)
+    elif len(coefficients) == 2:
+        b, c = coefficients
+        return roots_of_quadratic_equation(0, b, c)
+    elif len(coefficients) == 1:
+        c = coefficients[0]
+        return roots_of_quadratic_equation(0, 0, c)
+
+    return None
+

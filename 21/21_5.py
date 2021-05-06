@@ -9,7 +9,3 @@ def fractal_print(arr):
         else:
             print(i, end=', ')
 
-
-fractal = [3]
-fractal.append(fractal)
-fractal_print(fractal)
